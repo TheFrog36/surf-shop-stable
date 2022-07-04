@@ -1,1 +1,55 @@
+<form [formGroup]="registerForm" class="form-container" (ngSubmit)="register()">
 
+  <h3>Account data</h3>
+
+  <label for="email">email</label>
+  <input id="email" type="text" formControlName="email">
+  <div *ngIf="!registerForm.get('email')!.valid && (registerForm.get('email')!.touched || registerForm.get('email')!.dirty)">Mail obbligatoria</div>
+
+  <label for="password">password</label>
+  <input id="password" type="text" formControlName="password">
+  <div *ngIf="!registerForm.get('password')!.valid && (registerForm.get('password')!.touched || registerForm.get('password')!.dirty)">La passowrd deve avere un #, la prima lettera maiuscola e una lunghezza di 8 caratteri</div>
+
+  <label for="password">password confirm</label>
+  <input id="passwordConfirm" type="text" formControlName="passwordConfirm">
+  <div *ngIf="!registerForm.get('passwordConfirm')!.valid && (registerForm.get('passwordConfirm')!.touched || registerForm.get('passwordConfirm')!.dirty)">La passowrd deve avere un #, la prima lettera maiuscola e una lunghezza di 8 caratteri</div>
+
+
+  <label for="surname">surname </label>
+  <input id="surname" type="text" formControlName="surname">
+  <div *ngIf="!registerForm.get('surname')!.valid && (registerForm.get('surname')!.touched || registerForm.get('surname')!.dirty)">campo obbligatorio</div>
+
+
+  <h3>Personal data</h3>
+  <label for="name">name</label>
+  <input id="name" type="text" formControlName="name">
+  <div *ngIf="!registerForm.get('name')!.valid && (registerForm.get('name')!.touched || registerForm.get('name')!.dirty)">campo obbligatorio</div>
+
+
+  <label for="username">username </label>
+  <input id="username" type="text" formControlName="username">
+  <div *ngIf="!registerForm.get('username')!.valid && (registerForm.get('username')!.touched || registerForm.get('username')!.dirty)">campo obbligatorio</div>
+
+
+  <label for="dob">dob </label>
+  <input id="dob" type="date" formControlName="dob">
+
+
+  <label for="addres">addres </label>
+  <input id="addres" type="text" formControlName="addres">
+  <div *ngIf="!registerForm.get('addres')!.valid && (registerForm.get('addres')!.touched || registerForm.get('addres')!.dirty)">campo obbligatorio</div>
+
+
+  <label for="city">city</label>
+  <input id="city" type="text" formControlName="city">
+  <div *ngIf="!registerForm.get('email')!.valid && (registerForm.get('email')!.touched || registerForm.get('email')!.dirty)">campo obbligatorio</div>
+
+
+  <label for="cardnumber">cardnumber</label>
+  <input id="cardnumber" type="text" formControlName="cardnumber">
+  <div *ngIf="!registerForm.get('cardnumber')!.valid && (registerForm.get('cardnumber')!.touched || registerForm.get('cardnumber')!.dirty)">campo obbligatorio</div>
+
+
+  <button [disabled]="!registerForm.valid">Submit</button>
+
+</form>

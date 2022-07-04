@@ -4,7 +4,6 @@
     <a routerLink="/product">prodotti</a>
     <a *ngIf="!userS.user" routerLink="/login">login</a>
     <a *ngIf="userS.user" (click)="logout()">logout</a>
-    <a routerLink="/register">register</a>
     <a routerLink="/user" >user</a>
   </nav>
 </header>
